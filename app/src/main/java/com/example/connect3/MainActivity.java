@@ -2,6 +2,7 @@ package com.example.connect3;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.GridLayoutAnimationController;
@@ -121,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-        GridLayout gridLayout = (GridLayout) findViewById(R.id.gridLayout);
+        androidx.gridlayout.widget.GridLayout gridLayout = (androidx.gridlayout.widget.GridLayout) findViewById(R.id.gridLayout);
 
         for (int i = 0; i< gridLayout.getChildCount(); i++) {
 
@@ -129,6 +130,9 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
+        Intent intent = getIntent();
+        finish();
+        startActivity(intent);
     }
 
     @Override
